@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
@@ -121,6 +121,7 @@ function App() {
   const [status, setStatus] = useState({ loading: true, error: '' })
   const [modal, setModal] = useState(null)
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 900 : false)
+  const calendarRef = useRef(null)
 
   const timeZone = 'local'
   const today = useMemo(() => startOfDayLocal(new Date()), [])
@@ -168,6 +169,12 @@ function App() {
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  useEffect(() => {
+    const api = calendarRef.current?.getApi()
+    if (!api) return
+    api.changeView(isMobile ? 'oneDay' : 'twoWeek')
+  }, [isMobile])
 
   const anchorDate = useMemo(() => {
     const parsed = parseDateInput(anchorDateInput)
@@ -420,6 +427,8 @@ function App() {
     <main className="page full-height">
       <section className="panel full-height">
         <FullCalendar
+          ref={calendarRef}
+          key={isMobile ? 'mobile' : 'desktop'}
           plugins={[dayGridPlugin, timeGridPlugin, listPlugin]}
           initialView={isMobile ? 'oneDay' : 'twoWeek'}
           events={events}
