@@ -558,9 +558,15 @@ function App() {
             )}
             {modal.kind === 'meal' && (
               <ul className="prep-tasks modal-list">
-                {(modal.items || []).map((item) => (
-                  <li key={item.mealId}>{item.mealName} · {item.servings || 1} porcao(oes)</li>
-                ))}
+                {(modal.items || []).map((item) => {
+                  const servings = item.servings || 1
+                  const displayServings = servings < 1 ? 1 : Math.round(servings)
+                  return (
+                    <li key={item.mealId}>
+                      {item.mealName} · {displayServings} porcao(oes)
+                    </li>
+                  )
+                })}
               </ul>
             )}
           </div>
