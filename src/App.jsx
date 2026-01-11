@@ -426,6 +426,8 @@ function App() {
               type: 'dayGrid',
               duration: { weeks: 2 },
               buttonText: '2 semanas',
+              dateAlignment: 'week',
+              dateIncrement: { weeks: 1 },
             },
           }}
           eventOrder={(a, b) => {
