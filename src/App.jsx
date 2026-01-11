@@ -421,7 +421,7 @@ function App() {
       <section className="panel full-height">
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, listPlugin]}
-          initialView={isMobile ? 'listWeek' : 'twoWeek'}
+          initialView={isMobile ? 'oneDay' : 'twoWeek'}
           events={events}
           timeZone={timeZone}
           initialDate={today}
@@ -430,7 +430,7 @@ function App() {
           expandRows
           headerToolbar={
             isMobile
-              ? { left: 'prev,next', center: 'title', right: 'listWeek,dayGridMonth' }
+              ? { left: 'prev,next', center: 'title', right: '' }
               : { left: 'prev,next', center: 'title', right: 'dayGridMonth,twoWeek' }
           }
           dayMaxEvents={false}
@@ -444,9 +444,10 @@ function App() {
               dateAlignment: 'week',
               dateIncrement: { weeks: 1 },
             },
-            listWeek: {
-              type: 'listWeek',
-              buttonText: 'Lista semanal',
+            oneDay: {
+              type: 'dayGrid',
+              duration: { days: 1 },
+              buttonText: 'Dia',
             },
           }}
           eventOrder={(a, b) => {
