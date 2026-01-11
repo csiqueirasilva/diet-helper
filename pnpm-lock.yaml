@@ -14,6 +14,9 @@ importers:
       '@fullcalendar/daygrid':
         specifier: ^6.1.20
         version: 6.1.20(@fullcalendar/core@6.1.20)
+      '@fullcalendar/list':
+        specifier: ^6.1.20
+        version: 6.1.20(@fullcalendar/core@6.1.20)
       '@fullcalendar/react':
         specifier: ^6.1.20
         version: 6.1.20(@fullcalendar/core@6.1.20)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -339,6 +342,11 @@ packages:
 
   '@fullcalendar/daygrid@6.1.20':
     resolution: {integrity: sha512-AO9vqhkLP77EesmJzuU+IGXgxNulsA8mgQHynclJ8U70vSwAVnbcLG9qftiTAFSlZjiY/NvhE7sflve6cJelyQ==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.1.20
+
+  '@fullcalendar/list@6.1.20':
+    resolution: {integrity: sha512-7Hzkbb7uuSqrXwTyD0Ld/7SwWNxPD6SlU548vtkIpH55rZ4qquwtwYdMPgorHos5OynHA4OUrZNcH51CjrCf2g==}
     peerDependencies:
       '@fullcalendar/core': ~6.1.20
 
@@ -1260,6 +1268,10 @@ snapshots:
       preact: 10.12.1
 
   '@fullcalendar/daygrid@6.1.20(@fullcalendar/core@6.1.20)':
+    dependencies:
+      '@fullcalendar/core': 6.1.20
+
+  '@fullcalendar/list@6.1.20(@fullcalendar/core@6.1.20)':
     dependencies:
       '@fullcalendar/core': 6.1.20
 

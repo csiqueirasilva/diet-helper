@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
+import listPlugin from '@fullcalendar/list'
 import './App.css'
 import ptBrLocale from '@fullcalendar/core/locales/pt-br'
 
@@ -119,6 +120,7 @@ function App() {
   const [anchorDateInput, setAnchorDateInput] = useState('')
   const [status, setStatus] = useState({ loading: true, error: '' })
   const [modal, setModal] = useState(null)
+  const [isMobile, setIsMobile] = useState(false)
 
   const timeZone = 'local'
   const today = useMemo(() => startOfDayLocal(new Date()), [])
@@ -156,6 +158,15 @@ function App() {
     return () => {
       active = false
     }
+  }, [])
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 900)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   const anchorDate = useMemo(() => {
@@ -409,15 +420,19 @@ function App() {
     <main className="page full-height">
       <section className="panel full-height">
         <FullCalendar
-          plugins={[dayGridPlugin, timeGridPlugin]}
-          initialView="twoWeek"
+          plugins={[dayGridPlugin, timeGridPlugin, listPlugin]}
+          initialView={isMobile ? 'listWeek' : 'twoWeek'}
           events={events}
           timeZone={timeZone}
           initialDate={today}
           height="100%"
           contentHeight="auto"
           expandRows
-          headerToolbar={{ left: 'prev,next', center: 'title', right: 'dayGridMonth,twoWeek' }}
+          headerToolbar={
+            isMobile
+              ? { left: 'prev,next', center: 'title', right: 'listWeek,dayGridMonth' }
+              : { left: 'prev,next', center: 'title', right: 'dayGridMonth,twoWeek' }
+          }
           dayMaxEvents={false}
           locales={[ptBrLocale]}
           locale="pt-br"
@@ -428,6 +443,10 @@ function App() {
               buttonText: '2 semanas',
               dateAlignment: 'week',
               dateIncrement: { weeks: 1 },
+            },
+            listWeek: {
+              type: 'listWeek',
+              buttonText: 'Lista semanal',
             },
           }}
           eventOrder={(a, b) => {
