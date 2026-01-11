@@ -12,50 +12,47 @@
     "tags": ["proteina", "domingo"],
     "ingredients": [
       { "name": "Acem em cubos", "quantity": 220, "unit": "g" },
-      { "name": "Cebola", "quantity": 80, "unit": "g" },
       { "name": "Alho", "quantity": 8, "unit": "g" },
-      { "name": "Molho de tomate base", "quantity": 150, "unit": "g" },
+      { "name": "Cebola", "quantity": 80, "unit": "g" },
       { "name": "Azeite", "quantity": 12, "unit": "ml" },
-      { "name": "Sal e pimenta", "quantity": 4, "unit": "g" }
+      { "name": "Ervas secas", "quantity": 3, "unit": "g" },
+      { "name": "Extrato de tomate", "quantity": 40, "unit": "g" }
     ],
     "steps": [
-      "Dourar alho e cebola no azeite, selar o acem.",
-      "Cozinhar com molho ate ficar macio; porcionar."
+      "Dourar alho e cebola, selar o acem.",
+      "Cozinhar com ervas e extrato ate ficar macio."
     ]
   },
   {
     "id": "proteina-lagarto-recheado",
-    "name": "Lagarto recheado",
+    "name": "Lagarto recheado (cenoura + linguica)",
     "tags": ["proteina", "domingo"],
     "ingredients": [
       { "name": "Lagarto", "quantity": 220, "unit": "g" },
-      { "name": "Cenoura para recheio", "quantity": 40, "unit": "g" },
-      { "name": "Bacon opcional", "quantity": 20, "unit": "g" },
-      { "name": "Cebola", "quantity": 60, "unit": "g" },
+      { "name": "Linguica", "quantity": 40, "unit": "g" },
+      { "name": "Cenoura", "quantity": 60, "unit": "g" },
       { "name": "Alho", "quantity": 8, "unit": "g" },
-      { "name": "Molho de tomate base", "quantity": 120, "unit": "g" },
+      { "name": "Cebola", "quantity": 80, "unit": "g" },
       { "name": "Azeite", "quantity": 12, "unit": "ml" },
-      { "name": "Sal e pimenta", "quantity": 4, "unit": "g" }
+      { "name": "Ervas secas", "quantity": 3, "unit": "g" },
+      { "name": "Extrato de tomate", "quantity": 40, "unit": "g" }
     ],
     "steps": [
-      "Rechear e selar o lagarto.",
-      "Cozinhar no molho ate ficar macio e fatiar."
+      "Rechear, selar, cozinhar com alho, cebola, extrato e ervas."
     ]
   },
   {
     "id": "proteina-file-acebolado",
     "name": "File mignon acebolado",
-    "tags": ["proteina", "domingo"],
+    "tags": ["proteina"],
     "ingredients": [
-      { "name": "File mignon em tiras", "quantity": 200, "unit": "g" },
-      { "name": "Cebola", "quantity": 80, "unit": "g" },
-      { "name": "Alho", "quantity": 6, "unit": "g" },
+      { "name": "File mignon", "quantity": 200, "unit": "g" },
+      { "name": "Cebola", "quantity": 90, "unit": "g" },
       { "name": "Azeite", "quantity": 10, "unit": "ml" },
       { "name": "Sal e pimenta", "quantity": 3, "unit": "g" }
     ],
     "steps": [
-      "Saltear alho e cebola, selar o file rapidamente.",
-      "Finalizar tempero e porcionar."
+      "Saltear cebola no azeite, selar o file rapidamente."
     ]
   },
   {
@@ -65,11 +62,13 @@
     "ingredients": [
       { "name": "Arroz cru", "quantity": 80, "unit": "g" },
       { "name": "Alho", "quantity": 3, "unit": "g" },
+      { "name": "Cebola", "quantity": 30, "unit": "g" },
       { "name": "Oleo ou azeite", "quantity": 6, "unit": "ml" },
+      { "name": "Louro", "quantity": 1, "unit": "g" },
       { "name": "Sal", "quantity": 2, "unit": "g" }
     ],
     "steps": [
-      "Refogue alho, toste o arroz e cozinhe com agua."
+      "Refogue alho e cebola, toste o arroz com louro e cozinhe."
     ]
   },
   {
@@ -77,15 +76,16 @@
     "name": "Legumes assados (ate quarta)",
     "tags": ["legumes"],
     "ingredients": [
+      { "name": "Cenoura", "quantity": 80, "unit": "g" },
+      { "name": "Cebola", "quantity": 60, "unit": "g" },
       { "name": "Brocolis", "quantity": 80, "unit": "g" },
-      { "name": "Cenoura", "quantity": 60, "unit": "g" },
-      { "name": "Abobrinha", "quantity": 60, "unit": "g" },
-      { "name": "Pimentao", "quantity": 40, "unit": "g" },
-      { "name": "Azeite", "quantity": 8, "unit": "ml" },
-      { "name": "Sal e ervas", "quantity": 3, "unit": "g" }
+      { "name": "Tomate cereja", "quantity": 80, "unit": "g" },
+      { "name": "Azeite", "quantity": 10, "unit": "ml" },
+      { "name": "Alecrim", "quantity": 2, "unit": "g" },
+      { "name": "Sal", "quantity": 3, "unit": "g" }
     ],
     "steps": [
-      "Assar em 200C ate ficar al dente, porcionar para seg/ter/qua."
+      "Assar com azeite, sal e alecrim ate ficar al dente; porcionar para seg/ter/qua."
     ]
   },
   {
@@ -94,12 +94,10 @@
     "tags": ["carbo"],
     "ingredients": [
       { "name": "Batata inglesa", "quantity": 200, "unit": "g" },
-      { "name": "Leite", "quantity": 50, "unit": "ml" },
-      { "name": "Manteiga", "quantity": 10, "unit": "g" },
       { "name": "Sal", "quantity": 2, "unit": "g" }
     ],
     "steps": [
-      "Cozinhar batata, amassar, incorporar leite/manteiga."
+      "Cozinhar batata, amassar com sal (e agua quente se precisar)."
     ]
   },
   {
@@ -108,11 +106,10 @@
     "tags": ["carbo"],
     "ingredients": [
       { "name": "Batata baroa", "quantity": 200, "unit": "g" },
-      { "name": "Azeite", "quantity": 8, "unit": "ml" },
       { "name": "Sal", "quantity": 2, "unit": "g" }
     ],
     "steps": [
-      "Cozinhar batata baroa e amassar com azeite e sal."
+      "Cozinhar batata baroa, amassar com sal (e agua quente se precisar)."
     ]
   },
   {
@@ -120,13 +117,42 @@
     "name": "Macarrao com molho de tomate",
     "tags": ["carbo", "pos-quarta"],
     "ingredients": [
-      { "name": "Macarrao seco", "quantity": 90, "unit": "g" },
-      { "name": "Molho de tomate base", "quantity": 120, "unit": "g" },
-      { "name": "Azeite", "quantity": 6, "unit": "ml" },
-      { "name": "Sal", "quantity": 2, "unit": "g" }
+      { "name": "Macarrao", "quantity": 90, "unit": "g" },
+      { "name": "Molho de tomate base", "quantity": 120, "unit": "g" }
     ],
     "steps": [
       "Cozinhar macarrao e envolver no molho aquecido."
+    ]
+  },
+  {
+    "id": "macarrao-ale-oleo",
+    "name": "Macarrao com alho e oleo",
+    "tags": ["carbo", "pos-quarta"],
+    "ingredients": [
+      { "name": "Macarrao", "quantity": 90, "unit": "g" },
+      { "name": "Oleo", "quantity": 8, "unit": "ml" },
+      { "name": "Alho", "quantity": 8, "unit": "g" },
+      { "name": "Sal", "quantity": 2, "unit": "g" }
+    ],
+    "steps": [
+      "Saltear alho no oleo e envolver o macarrao cozido."
+    ]
+  },
+  {
+    "id": "macarrao-atum",
+    "name": "Macarrao com atum",
+    "tags": ["carbo", "pos-quarta"],
+    "ingredients": [
+      { "name": "Macarrao", "quantity": 90, "unit": "g" },
+      { "name": "Alho", "quantity": 6, "unit": "g" },
+      { "name": "Cebola", "quantity": 40, "unit": "g" },
+      { "name": "Azeite", "quantity": 10, "unit": "ml" },
+      { "name": "Ervas secas", "quantity": 2, "unit": "g" },
+      { "name": "Molho de tomate", "quantity": 100, "unit": "g" },
+      { "name": "Atum em lata", "quantity": 120, "unit": "g" }
+    ],
+    "steps": [
+      "Refogar alho/cebola, aquecer molho, juntar atum e macarrao."
     ]
   },
   {
@@ -134,66 +160,85 @@
     "name": "Almondegas de carne",
     "tags": ["proteina", "pos-quarta"],
     "ingredients": [
-      { "name": "Carne moida", "quantity": 180, "unit": "g" },
-      { "name": "Cebola", "quantity": 40, "unit": "g" },
-      { "name": "Alho", "quantity": 6, "unit": "g" },
-      { "name": "Farinha de rosca", "quantity": 15, "unit": "g" },
-      { "name": "Ovo", "quantity": 0.5, "unit": "un" },
-      { "name": "Azeite", "quantity": 8, "unit": "ml" },
-      { "name": "Sal e pimenta", "quantity": 3, "unit": "g" }
+      { "name": "Carne moida", "quantity": 200, "unit": "g" },
+      { "name": "Alho", "quantity": 8, "unit": "g" },
+      { "name": "Cebola", "quantity": 60, "unit": "g" },
+      { "name": "Azeite", "quantity": 10, "unit": "ml" },
+      { "name": "Ervas secas", "quantity": 3, "unit": "g" }
     ],
     "steps": [
-      "Misturar, bolear, selar e finalizar no molho."
+      "Temperar, bolear, dourar no azeite e finalizar."
     ]
   },
   {
-    "id": "combo-quarta-frango-macarrao-alho-oleo",
-    "name": "Frango + macarrao alho/oleo",
-    "tags": ["quarta"],
+    "id": "almondegas-de-frango",
+    "name": "Almondegas de frango",
+    "tags": ["proteina", "quarta"],
+    "ingredients": [
+      { "name": "Frango moido", "quantity": 200, "unit": "g" },
+      { "name": "Alho", "quantity": 8, "unit": "g" },
+      { "name": "Cebola", "quantity": 60, "unit": "g" },
+      { "name": "Azeite", "quantity": 10, "unit": "ml" },
+      { "name": "Ervas secas", "quantity": 3, "unit": "g" }
+    ],
+    "steps": [
+      "Temperar, bolear, dourar no azeite e finalizar."
+    ]
+  },
+  {
+    "id": "bife-mignon",
+    "name": "Bife de file mignon",
+    "tags": ["proteina"],
+    "ingredients": [
+      { "name": "File mignon", "quantity": 200, "unit": "g" },
+      { "name": "Sal e pimenta", "quantity": 3, "unit": "g" }
+    ],
+    "steps": [
+      "Grelhar o bife e servir."
+    ]
+  },
+  {
+    "id": "bife-cubos-cebola",
+    "name": "Bife em cubos com cebola",
+    "tags": ["proteina"],
+    "ingredients": [
+      { "name": "File mignon em cubos", "quantity": 200, "unit": "g" },
+      { "name": "Cebola", "quantity": 80, "unit": "g" },
+      { "name": "Azeite", "quantity": 10, "unit": "ml" },
+      { "name": "Sal e pimenta", "quantity": 3, "unit": "g" }
+    ],
+    "steps": [
+      "Saltear cubos com cebola ate dourar."
+    ]
+  },
+  {
+    "id": "frango-grelhado",
+    "name": "Frango grelhado",
+    "tags": ["proteina", "quarta"],
     "ingredients": [
       { "name": "Peito de frango", "quantity": 180, "unit": "g" },
-      { "name": "Macarrao seco", "quantity": 90, "unit": "g" },
-      { "name": "Alho", "quantity": 8, "unit": "g" },
-      { "name": "Azeite", "quantity": 12, "unit": "ml" },
-      { "name": "Sal e pimenta", "quantity": 3, "unit": "g" }
+      { "name": "Alecrim", "quantity": 2, "unit": "g" },
+      { "name": "Limao", "quantity": 20, "unit": "ml" },
+      { "name": "Azeite", "quantity": 10, "unit": "ml" }
     ],
     "steps": [
-      "Dourar alho, grelhar frango e envolver macarrao."
+      "Temperar com alecrim, limao e azeite; grelhar."
     ]
   },
   {
-    "id": "combo-quarta-peixe-batata-assada",
-    "name": "Peixe grelhado + batata assada",
-    "tags": ["quarta"],
+    "id": "frango-desfiado",
+    "name": "Frango desfiado ao molho",
+    "tags": ["proteina"],
     "ingredients": [
-      { "name": "Peixe branco", "quantity": 180, "unit": "g" },
-      { "name": "Batata inglesa", "quantity": 200, "unit": "g" },
-      { "name": "Azeite", "quantity": 12, "unit": "ml" },
+      { "name": "Peito de frango", "quantity": 180, "unit": "g" },
       { "name": "Alho", "quantity": 6, "unit": "g" },
-      { "name": "Alecrim ou ervas", "quantity": 2, "unit": "g" },
-      { "name": "Sal e pimenta", "quantity": 3, "unit": "g" }
+      { "name": "Cebola", "quantity": 60, "unit": "g" },
+      { "name": "Azeite", "quantity": 10, "unit": "ml" },
+      { "name": "Ervas secas", "quantity": 3, "unit": "g" },
+      { "name": "Extrato de tomate", "quantity": 40, "unit": "g" }
     ],
     "steps": [
-      "Assar batata com azeite/alecrim; grelhar peixe com alho."
-    ]
-  },
-  {
-    "id": "combo-quarta-almondegas-frango-pure",
-    "name": "Almondegas de frango + pure",
-    "tags": ["quarta"],
-    "ingredients": [
-      { "name": "Frango moido", "quantity": 180, "unit": "g" },
-      { "name": "Cebola", "quantity": 40, "unit": "g" },
-      { "name": "Alho", "quantity": 6, "unit": "g" },
-      { "name": "Farinha de rosca", "quantity": 15, "unit": "g" },
-      { "name": "Ovo", "quantity": 0.5, "unit": "un" },
-      { "name": "Batata inglesa", "quantity": 200, "unit": "g" },
-      { "name": "Leite", "quantity": 50, "unit": "ml" },
-      { "name": "Manteiga", "quantity": 10, "unit": "g" },
-      { "name": "Sal e pimenta", "quantity": 4, "unit": "g" }
-    ],
-    "steps": [
-      "Bolear e dourar almondegas; servir com pure."
+      "Refogar alho/cebola, juntar frango desfiado, ervas e extrato."
     ]
   },
   {
@@ -202,12 +247,89 @@
     "tags": ["quarta"],
     "ingredients": [
       { "name": "Frango desfiado", "quantity": 150, "unit": "g" },
-      { "name": "Massa de panqueca", "quantity": 120, "unit": "g" },
+      { "name": "Oleo", "quantity": 8, "unit": "ml" },
+      { "name": "Leite", "quantity": 120, "unit": "ml" },
+      { "name": "Ovo", "quantity": 2, "unit": "un" },
+      { "name": "Sal", "quantity": 2, "unit": "g" },
+      { "name": "Farinha de trigo", "quantity": 60, "unit": "g" },
       { "name": "Molho de tomate base", "quantity": 80, "unit": "g" },
-      { "name": "Queijo ralado opcional", "quantity": 20, "unit": "g" }
+      { "name": "Queijo parmesao (opcional)", "quantity": 20, "unit": "g" }
     ],
     "steps": [
-      "Rechear panquecas com frango e gratinar com molho."
+      "Preparar massa com leite/ovo/farinha; rechear com frango desfiado e molho; gratinar se desejar."
+    ]
+  },
+  {
+    "id": "omelete-simples",
+    "name": "Omelete",
+    "tags": ["proteina"],
+    "ingredients": [
+      { "name": "Ovo", "quantity": 3, "unit": "un" },
+      { "name": "Peito de peru", "quantity": 40, "unit": "g" },
+      { "name": "Queijo", "quantity": 30, "unit": "g" },
+      { "name": "Cebola", "quantity": 30, "unit": "g" },
+      { "name": "Ervas", "quantity": 2, "unit": "g" }
+    ],
+    "steps": []
+  },
+  {
+    "id": "ovo-cozido",
+    "name": "Ovo cozido",
+    "tags": ["proteina"],
+    "ingredients": [
+      { "name": "Ovo", "quantity": 1, "unit": "un" }
+    ],
+    "steps": [
+      "Cozinhar por 9-11 minutos e resfriar."
+    ]
+  },
+  {
+    "id": "combo-quarta-frango-macarrao-alho-oleo",
+    "name": "Frango grelhado + macarrao alho/oleo",
+    "tags": ["quarta"],
+    "ingredients": [
+      { "name": "Peito de frango", "quantity": 180, "unit": "g" },
+      { "name": "Macarrao", "quantity": 90, "unit": "g" },
+      { "name": "Oleo", "quantity": 8, "unit": "ml" },
+      { "name": "Alho", "quantity": 8, "unit": "g" },
+      { "name": "Sal", "quantity": 2, "unit": "g" }
+    ],
+    "steps": [
+      "Grelhar frango temperado; saltear alho no oleo e envolver macarrao."
+    ]
+  },
+  {
+    "id": "combo-quarta-peixe-batata-assada",
+    "name": "Peixe grelhado + batata assada com alecrim",
+    "tags": ["quarta"],
+    "ingredients": [
+      { "name": "Peixe", "quantity": 180, "unit": "g" },
+      { "name": "Batata inglesa", "quantity": 200, "unit": "g" },
+      { "name": "Alecrim", "quantity": 2, "unit": "g" },
+      { "name": "Limao", "quantity": 20, "unit": "ml" },
+      { "name": "Azeite", "quantity": 12, "unit": "ml" },
+      { "name": "Alho", "quantity": 6, "unit": "g" },
+      { "name": "Sal", "quantity": 3, "unit": "g" }
+    ],
+    "steps": [
+      "Assar batata com alecrim; grelhar peixe com alho, limao e sal."
+    ]
+  },
+  {
+    "id": "combo-quarta-almondegas-frango-pure",
+    "name": "Almondegas de frango + pure",
+    "tags": ["quarta"],
+    "ingredients": [
+      { "name": "Frango moido", "quantity": 180, "unit": "g" },
+      { "name": "Alho", "quantity": 8, "unit": "g" },
+      { "name": "Cebola", "quantity": 60, "unit": "g" },
+      { "name": "Azeite", "quantity": 10, "unit": "ml" },
+      { "name": "Ervas secas", "quantity": 3, "unit": "g" },
+      { "name": "Batata inglesa", "quantity": 200, "unit": "g" },
+      { "name": "Sal", "quantity": 3, "unit": "g" }
+    ],
+    "steps": [
+      "Bolear e dourar almondegas; servir com pure."
     ]
   }
 ]
