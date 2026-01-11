@@ -495,6 +495,33 @@ function App() {
           <span className="legend-item"><span className="legend-dot event-dinner" />Jantar</span>
           <span className="legend-item"><span className="legend-dot event-shopping" />Compras</span>
           <span className="legend-item"><span className="legend-dot event-prep" />Preparo</span>
+          <button
+            type="button"
+            className="ghost help-btn"
+            onClick={() =>
+              setModal({
+                kind: 'ajuda',
+                title: 'Como editar os dados (para LLM / agente)',
+                helpText: `Formato dos JSONs (public/data):
+- config.json: { startDate, horizonDays, shoppingFrequencyDays, shoppingAnchorDate, timezone }
+- meal-plan.json: { defaultPlanId, plans[{ id, label, proteinRotation[{id,label,proteinId}], fallbackProteinId, template:{ days[ { dayIndex, name, slots[ { time, items[ { mealId, servings } ] } ] } ] } }] }
+- meals.json: [ { id, name, tags?, ingredients[ { name, quantity, unit } ], steps? } ]
+
+Regras:
+- Marker week-protein em meal-plan se resolve para proteinId da proteinRotation da semana.
+- Preparos: domingo e quarta (dados fixos na app), mas se quiser novas tarefas, edite PREP_TASKS em App.jsx.
+- Quantidades na lista de compras = soma(ingredient.quantity * servings) por semana.
+
+Como editar:
+- Adicione/edite refeicoes em meals.json (mantenha id unico).
+- Ajuste slots e week-protein em meal-plan.json; cada slot pode ter items[{mealId,servings}].
+- Troque o horizonte em config.json (horizonDays) se quiser mais/menos meses.
+Salve, rode pnpm build e faça deploy.`
+              })
+            }
+          >
+            ?
+          </button>
         </div>
       </section>
 
@@ -569,6 +596,9 @@ function App() {
                   return <li key={item.mealId}>{item.mealName}</li>
                 })}
               </ul>
+            )}
+            {modal.kind === 'ajuda' && (
+              <pre className="help-text">{modal.helpText}</pre>
             )}
           </div>
         </div>

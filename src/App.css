@@ -198,6 +198,23 @@
   margin: 10px 0 0;
 }
 
+.help-btn {
+  padding: 4px 8px;
+  font-weight: 700;
+  border: 1px solid #dce3ef;
+}
+
+.help-text {
+  background: #f7fafc;
+  border: 1px solid #dce3ef;
+  border-radius: 8px;
+  padding: 12px;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 12px;
+  margin: 12px 0 0;
+}
+
 .shopping-modal-content {
   max-height: 70vh;
   overflow-y: auto;
