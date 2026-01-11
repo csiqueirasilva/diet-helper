@@ -14,6 +14,7 @@ const DATA_FILES = {
 
 const WEEK_PROTEIN_KEY = 'week-protein'
 const MS_PER_DAY = 24 * 60 * 60 * 1000
+const PAST_DAYS = 14
 
 const PREP_TASKS = {
   domingo: [
@@ -178,8 +179,8 @@ function App() {
 
   const anchorDate = useMemo(() => {
     const parsed = parseDateInput(anchorDateInput)
-    if (parsed) return parsed
-    return lastSundayFrom(today)
+    const base = parsed || lastSundayFrom(today)
+    return addDays(base, -PAST_DAYS)
   }, [anchorDateInput, today])
 
   const mealsById = useMemo(() => {
