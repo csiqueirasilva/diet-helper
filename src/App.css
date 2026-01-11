@@ -1,0 +1,273 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100vh;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 11px;
+  margin: 0;
+  color: #1e9a5f;
+}
+
+.item-name {
+  margin: 0;
+  font-weight: 700;
+}
+
+.muted {
+  margin: 0;
+  color: #556076;
+  font-size: 13px;
+}
+
+.shopping-mini {
+  margin: 8px 0 0;
+  padding-left: 16px;
+  color: #556076;
+  font-size: 13px;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #dce3ef;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.shopping-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shopping-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid #dce3ef;
+  border-radius: 10px;
+  background: #f9fbff;
+}
+
+.qty {
+  font-weight: 700;
+  color: #1e9a5f;
+}
+
+.loading,
+.error {
+  background: #fff;
+  border: 1px solid #dce3ef;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.sticky-legend {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #394050;
+}
+
+.event-meal,
+.event-lunch {
+  background-color: #48bb78 !important;
+  border-color: #38a169 !important;
+}
+
+.event-marmita {
+  background-color: #a3e635 !important;
+  border-color: #84cc16 !important;
+}
+
+.event-dinner {
+  background-color: #2f855a !important;
+  border-color: #276749 !important;
+}
+
+.event-shopping {
+  background-color: #0ea5e9 !important;
+  border-color: #0284c7 !important;
+}
+
+.event-prep {
+  background-color: #ef4444 !important;
+  border-color: #dc2626 !important;
+}
+
+.legend .event-lunch,
+.legend .event-meal {
+  background: #48bb78;
+}
+.legend .event-marmita {
+  background: #a3e635;
+}
+.legend .event-dinner {
+  background: #2f855a;
+}
+.legend .event-shopping {
+  background: #0ea5e9;
+}
+.legend .event-prep {
+  background: #ef4444;
+}
+
+.fc-view-harness {
+  min-height: calc(100vh - 120px);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 50;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 720px;
+  width: 100%;
+  border: 1px solid #dce3ef;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-title {
+  margin: 0 0 4px;
+}
+
+.modal-list {
+  margin: 10px 0 0;
+}
+
+.shopping-modal-content {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.fc {
+  --fc-border-color: #dce3ef;
+  --fc-event-bg-color: #1e9a5f;
+  --fc-event-border-color: #1e9a5f;
+  --fc-event-text-color: #fff;
+  font-family: inherit;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 16px;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: #dce3ef;
+}
+
+.fc .fc-day-today {
+  background: #fffbe6;
+  border: 2px solid #fcd34d;
+}
+
+.fc .fc-daygrid-event {
+  white-space: normal;
+  border-radius: 6px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+.fc .fc-button {
+  background: #1e9a5f;
+  border: none;
+  border-radius: 6px;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background: #15874f;
+}
+
+@media (max-width: 900px) {
+  .page {
+    height: auto;
+  }
+
+  .fc-view-harness {
+    min-height: auto;
+  }
+
+  .fc .fc-daygrid-day-frame {
+    min-height: 140px;
+  }
+
+  .fc .fc-daygrid-day-events {
+    flex-direction: column;
+  }
+
+  .fc .fc-daygrid-event {
+    width: 100%;
+  }
+}

@@ -1,0 +1,217 @@
+[
+  {
+    "id": "refeicao-livre",
+    "name": "Refeicao livre",
+    "tags": ["livre"],
+    "ingredients": [],
+    "steps": []
+  },
+  {
+    "id": "proteina-acem-molho",
+    "name": "Acem em cubos ao molho",
+    "tags": ["proteina", "domingo"],
+    "ingredients": [
+      {"name": "Acem em cubos", "quantity": 200, "unit": "g"},
+      {"name": "Cebola", "quantity": 60, "unit": "g"},
+      {"name": "Alho", "quantity": 6, "unit": "g"},
+      {"name": "Molho de tomate base", "quantity": 120, "unit": "g"},
+      {"name": "Azeite", "quantity": 10, "unit": "ml"},
+      {"name": "Sal e pimenta", "quantity": 3, "unit": "g"}
+    ],
+    "steps": [
+      "Dourar alho e cebola no azeite, selar o acem.",
+      "Adicionar molho de tomate e cozinhar ate ficar macio."
+    ]
+  },
+  {
+    "id": "proteina-file-acebolado",
+    "name": "File mignon acebolado",
+    "tags": ["proteina", "domingo"],
+    "ingredients": [
+      {"name": "File mignon em tiras", "quantity": 200, "unit": "g"},
+      {"name": "Cebola", "quantity": 80, "unit": "g"},
+      {"name": "Alho", "quantity": 6, "unit": "g"},
+      {"name": "Molho de tomate base", "quantity": 80, "unit": "g"},
+      {"name": "Azeite", "quantity": 10, "unit": "ml"},
+      {"name": "Sal e pimenta", "quantity": 3, "unit": "g"}
+    ],
+    "steps": [
+      "Saltear alho e cebola, selar o file rapidamente.",
+      "Finalizar com molho de tomate leve, sem passar do ponto."
+    ]
+  },
+  {
+    "id": "proteina-acem-ervas",
+    "name": "Acem tomate + ervas",
+    "tags": ["proteina", "domingo"],
+    "ingredients": [
+      {"name": "Acem em cubos", "quantity": 200, "unit": "g"},
+      {"name": "Cebola", "quantity": 60, "unit": "g"},
+      {"name": "Alho", "quantity": 6, "unit": "g"},
+      {"name": "Molho de tomate base", "quantity": 130, "unit": "g"},
+      {"name": "Azeite", "quantity": 10, "unit": "ml"},
+      {"name": "Paprica + louro + ervas", "quantity": 4, "unit": "g"},
+      {"name": "Sal e pimenta", "quantity": 3, "unit": "g"}
+    ],
+    "steps": [
+      "Dourar alho e cebola, selar acem.",
+      "Juntar molho, ervas e cozinhar ate ficar macio."
+    ]
+  },
+  {
+    "id": "proteina-file-pimentao",
+    "name": "File mignon tomate + pimentao",
+    "tags": ["proteina", "domingo"],
+    "ingredients": [
+      {"name": "File mignon em tiras", "quantity": 200, "unit": "g"},
+      {"name": "Cebola", "quantity": 60, "unit": "g"},
+      {"name": "Pimentao em tiras", "quantity": 60, "unit": "g"},
+      {"name": "Alho", "quantity": 6, "unit": "g"},
+      {"name": "Molho de tomate base", "quantity": 90, "unit": "g"},
+      {"name": "Azeite", "quantity": 10, "unit": "ml"},
+      {"name": "Sal e pimenta", "quantity": 3, "unit": "g"}
+    ],
+    "steps": [
+      "Saltear alho, cebola e pimentao, selar o file.",
+      "Finalizar com molho rapido."
+    ]
+  },
+  {
+    "id": "proteina-acem-simples",
+    "name": "Carne do domingo (acem ou file, simples)",
+    "tags": ["proteina", "domingo", "flex"],
+    "ingredients": [
+      {"name": "Carne vermelha (acem ou file)", "quantity": 200, "unit": "g"},
+      {"name": "Cebola", "quantity": 60, "unit": "g"},
+      {"name": "Alho", "quantity": 6, "unit": "g"},
+      {"name": "Molho de tomate base", "quantity": 100, "unit": "g"},
+      {"name": "Azeite", "quantity": 10, "unit": "ml"},
+      {"name": "Sal e pimenta", "quantity": 3, "unit": "g"}
+    ],
+    "steps": [
+      "Refogue alho e cebola, sele a carne escolhida.",
+      "Adicione molho para suculencia e mantenha simples."
+    ]
+  },
+  {
+    "id": "arroz-base",
+    "name": "Arroz branco",
+    "tags": ["carbo", "domingo"],
+    "ingredients": [
+      {"name": "Arroz cru", "quantity": 70, "unit": "g"},
+      {"name": "Alho", "quantity": 3, "unit": "g"},
+      {"name": "Oleo ou azeite", "quantity": 5, "unit": "ml"},
+      {"name": "Sal", "quantity": 2, "unit": "g"}
+    ],
+    "steps": [
+      "Refogue o alho, toste o arroz e cozinhe com agua quente."
+    ]
+  },
+  {
+    "id": "legumes-domingo",
+    "name": "Legumes ate quarta",
+    "tags": ["legumes", "domingo"],
+    "ingredients": [
+      {"name": "Brocolis", "quantity": 80, "unit": "g"},
+      {"name": "Cenoura", "quantity": 60, "unit": "g"},
+      {"name": "Vagem", "quantity": 40, "unit": "g"},
+      {"name": "Abobrinha", "quantity": 40, "unit": "g"},
+      {"name": "Sal", "quantity": 2, "unit": "g"}
+    ],
+    "steps": [
+      "Cozinhe no vapor ou salteie rapido, porcione para 3 almocos."
+    ]
+  },
+  {
+    "id": "salada-simples",
+    "name": "Salada leve",
+    "tags": ["salada"],
+    "ingredients": [
+      {"name": "Alface ou folhas", "quantity": 50, "unit": "g"},
+      {"name": "Tomate", "quantity": 60, "unit": "g"},
+      {"name": "Azeite", "quantity": 5, "unit": "ml"}
+    ],
+    "steps": []
+  },
+  {
+    "id": "molho-base",
+    "name": "Molho de tomate base (congelar)",
+    "tags": ["molho", "domingo"],
+    "ingredients": [
+      {"name": "Tomate ou passata", "quantity": 150, "unit": "g"},
+      {"name": "Cebola", "quantity": 40, "unit": "g"},
+      {"name": "Alho", "quantity": 6, "unit": "g"},
+      {"name": "Azeite", "quantity": 10, "unit": "ml"},
+      {"name": "Ervas secas", "quantity": 2, "unit": "g"},
+      {"name": "Sal", "quantity": 2, "unit": "g"}
+    ],
+    "steps": [
+      "Refogue alho e cebola, junte tomate e ervas, reduza e porcione."
+    ]
+  },
+  {
+    "id": "macarrao-precozido",
+    "name": "Macarrao pre-cozido (base)",
+    "tags": ["carbo", "quarta"],
+    "ingredients": [
+      {"name": "Macarrao seco", "quantity": 90, "unit": "g"},
+      {"name": "Oleo ou azeite", "quantity": 5, "unit": "ml"},
+      {"name": "Sal", "quantity": 2, "unit": "g"}
+    ],
+    "steps": [
+      "Cozinhe al dente, fio de oleo e armazene fechado."
+    ]
+  },
+  {
+    "id": "macarrao-alho-oleo",
+    "name": "Macarrao alho/oleo (rapido)",
+    "tags": ["carbo", "quarta"],
+    "ingredients": [
+      {"name": "Macarrao seco", "quantity": 90, "unit": "g"},
+      {"name": "Alho", "quantity": 6, "unit": "g"},
+      {"name": "Azeite", "quantity": 10, "unit": "ml"},
+      {"name": "Salsa ou ervas", "quantity": 2, "unit": "g"},
+      {"name": "Sal", "quantity": 2, "unit": "g"}
+    ],
+    "steps": [
+      "Salteie alho no azeite, junte macarrao pre-cozido e finalize com ervas."
+    ]
+  },
+  {
+    "id": "frango-base",
+    "name": "Frango em cubos (quarta)",
+    "tags": ["proteina", "quarta"],
+    "ingredients": [
+      {"name": "Peito de frango em cubos", "quantity": 180, "unit": "g"},
+      {"name": "Alho", "quantity": 5, "unit": "g"},
+      {"name": "Azeite", "quantity": 8, "unit": "ml"},
+      {"name": "Sal", "quantity": 3, "unit": "g"},
+      {"name": "Paprica ou ervas", "quantity": 2, "unit": "g"}
+    ],
+    "steps": [
+      "Temperar, selar em fogo alto e manter suculento para variar (sugo, alho/oleo)."
+    ]
+  },
+  {
+    "id": "ovo-cozido",
+    "name": "Ovo cozido",
+    "tags": ["proteina", "pos-quarta"],
+    "ingredients": [
+      {"name": "Ovo", "quantity": 1, "unit": "un"}
+    ],
+    "steps": []
+  },
+  {
+    "id": "omelete-simples",
+    "name": "Omelete rapida",
+    "tags": ["proteina", "pos-quarta"],
+    "ingredients": [
+      {"name": "Ovo", "quantity": 3, "unit": "un"},
+      {"name": "Tomate", "quantity": 60, "unit": "g"},
+      {"name": "Cebola", "quantity": 30, "unit": "g"},
+      {"name": "Azeite", "quantity": 6, "unit": "ml"},
+      {"name": "Queijo (opcional)", "quantity": 20, "unit": "g"}
+    ],
+    "steps": []
+  }
+]

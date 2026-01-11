@@ -1,0 +1,7 @@
+{
+  "startDate": "2026-01-11",
+  "horizonDays": 365,
+  "shoppingFrequencyDays": 7,
+  "shoppingAnchorDate": "2025-01-11",
+  "timezone": "America/Sao_Paulo"
+}

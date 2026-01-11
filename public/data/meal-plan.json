@@ -1,0 +1,167 @@
+{
+  "defaultPlanId": "plano-semanal",
+  "plans": [
+    {
+      "id": "plano-semanal",
+      "label": "Domingo/Quarta - Ciclo semanal fixo",
+      "totalDays": 60,
+      "proteinRotation": [
+        {"id": "week-1", "label": "Acem em cubos ao molho", "proteinId": "proteina-acem-molho"},
+        {"id": "week-2", "label": "File mignon acebolado", "proteinId": "proteina-file-acebolado"},
+        {"id": "week-3", "label": "Acem tomate + ervas", "proteinId": "proteina-acem-ervas"},
+        {"id": "week-4", "label": "File tomate + pimentao", "proteinId": "proteina-file-pimentao"}
+      ],
+      "fallbackProteinId": "proteina-acem-simples",
+      "template": {
+        "days": [
+          {
+            "dayIndex": 0,
+            "name": "Domingo",
+            "slots": [
+              {"time": "Almoco", "items": [{"mealId": "refeicao-livre", "servings": 1}], "note": "Livre"},
+              {
+                "time": "Jantar",
+                "items": [
+                  {"mealId": "week-protein", "servings": 1},
+                  {"mealId": "arroz-base", "servings": 1},
+                  {"mealId": "salada-simples", "servings": 1}
+                ]
+              }
+            ]
+          },
+          {
+            "dayIndex": 1,
+            "name": "Segunda",
+            "slots": [
+              {
+                "time": "Almoco (marmita)",
+                "items": [
+                  {"mealId": "week-protein", "servings": 1},
+                  {"mealId": "arroz-base", "servings": 1},
+                  {"mealId": "legumes-domingo", "servings": 1}
+                ]
+              },
+              {
+                "time": "Jantar",
+                "items": [
+                  {"mealId": "week-protein", "servings": 1},
+                  {"mealId": "arroz-base", "servings": 1},
+                  {"mealId": "salada-simples", "servings": 1}
+                ]
+              }
+            ]
+          },
+          {
+            "dayIndex": 2,
+            "name": "Terca",
+            "slots": [
+              {
+                "time": "Almoco (marmita)",
+                "items": [
+                  {"mealId": "week-protein", "servings": 1},
+                  {"mealId": "arroz-base", "servings": 1},
+                  {"mealId": "legumes-domingo", "servings": 1}
+                ]
+              },
+              {
+                "time": "Jantar",
+                "items": [
+                  {"mealId": "week-protein", "servings": 1},
+                  {"mealId": "arroz-base", "servings": 1},
+                  {"mealId": "salada-simples", "servings": 1},
+                  {"mealId": "molho-base", "servings": 0.5}
+                ]
+              }
+            ]
+          },
+          {
+            "dayIndex": 3,
+            "name": "Quarta",
+            "slots": [
+              {
+                "time": "Almoco (marmita)",
+                "items": [
+                  {"mealId": "week-protein", "servings": 1},
+                  {"mealId": "arroz-base", "servings": 1},
+                  {"mealId": "legumes-domingo", "servings": 1}
+                ]
+              },
+              {
+                "time": "Jantar (comeca parte facil)",
+                "items": [
+                  {"mealId": "macarrao-precozido", "servings": 1},
+                  {"mealId": "frango-base", "servings": 1},
+                  {"mealId": "molho-base", "servings": 1}
+                ]
+              }
+            ]
+          },
+          {
+            "dayIndex": 4,
+            "name": "Quinta",
+            "slots": [
+              {
+                "time": "Almoco (marmita)",
+                "items": [
+                  {"mealId": "macarrao-precozido", "servings": 1},
+                  {"mealId": "frango-base", "servings": 1},
+                  {"mealId": "molho-base", "servings": 1}
+                ]
+              },
+              {
+                "time": "Jantar",
+                "items": [
+                  {"mealId": "macarrao-alho-oleo", "servings": 1},
+                  {"mealId": "frango-base", "servings": 1}
+                ]
+              }
+            ]
+          },
+          {
+            "dayIndex": 5,
+            "name": "Sexta",
+            "slots": [
+              {
+                "time": "Almoco (marmita)",
+                "items": [
+                  {"mealId": "macarrao-precozido", "servings": 1},
+                  {"mealId": "frango-base", "servings": 1},
+                  {"mealId": "ovo-cozido", "servings": 1}
+                ]
+              },
+              {
+                "time": "Jantar",
+                "items": [
+                  {"mealId": "omelete-simples", "servings": 1},
+                  {"mealId": "macarrao-alho-oleo", "servings": 1}
+                ]
+              }
+            ]
+          },
+          {
+            "dayIndex": 6,
+            "name": "Sabado",
+            "slots": [
+              {
+                "time": "Almoco",
+                "items": [
+                  {"mealId": "macarrao-precozido", "servings": 1},
+                  {"mealId": "frango-base", "servings": 1},
+                  {"mealId": "ovo-cozido", "servings": 1}
+                ]
+              },
+              {
+                "time": "Jantar",
+                "items": [
+                  {"mealId": "macarrao-precozido", "servings": 1},
+                  {"mealId": "frango-base", "servings": 1},
+                  {"mealId": "molho-base", "servings": 1}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
