@@ -213,6 +213,8 @@
   font-family: monospace;
   font-size: 12px;
   margin: 12px 0 0;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 .shopping-modal-content {
