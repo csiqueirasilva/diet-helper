@@ -498,27 +498,46 @@ function App() {
           <button
             type="button"
             className="ghost help-btn"
-            onClick={() =>
-              setModal({
-                kind: 'ajuda',
-                title: 'Como editar os dados (para LLM / agente)',
-                helpText: `Formato dos JSONs (public/data):
+            onClick={() => {
+              const mealsSummary = meals
+                .map((m) => `- ${m.id}: ${m.name}`)
+                .join('\n')
+
+              const shoppingSummary = shoppingList
+                .map((item) => {
+                  const sources = item.sources?.join(', ') || ''
+                  const qty = item.total && item.unit ? ` - ${item.total} ${item.unit}` : ''
+                  return `- ${item.name}${qty}${sources ? ` (${sources})` : ''}`
+                })
+                .join('\n')
+
+              const helpText = `Formato dos JSONs (public/data):
 - config.json: { startDate, horizonDays, shoppingFrequencyDays, shoppingAnchorDate, timezone }
 - meal-plan.json: { defaultPlanId, plans[{ id, label, proteinRotation[{id,label,proteinId}], fallbackProteinId, template:{ days[ { dayIndex, name, slots[ { time, items[ { mealId, servings } ] } ] } ] } }] }
 - meals.json: [ { id, name, tags?, ingredients[ { name, quantity, unit } ], steps? } ]
 
 Regras:
 - Marker week-protein em meal-plan se resolve para proteinId da proteinRotation da semana.
-- Preparos: domingo e quarta (dados fixos na app), mas se quiser novas tarefas, edite PREP_TASKS em App.jsx.
-- Quantidades na lista de compras = soma(ingredient.quantity * servings) por semana.
+- Preparos: domingo e quarta (dados fixos na app); para mudar texto, altere PREP_TASKS em App.jsx.
+- Lista de compras semanal = soma(ingredient.quantity * servings) por semana.
 
 Como editar:
 - Adicione/edite refeicoes em meals.json (mantenha id unico).
 - Ajuste slots e week-protein em meal-plan.json; cada slot pode ter items[{mealId,servings}].
-- Troque o horizonte em config.json (horizonDays) se quiser mais/menos meses.
-Salve, rode pnpm build e faça deploy.`
+- Troque horizonDays em config.json para mais/menos meses.
+
+Dados atuais (refeicoes):
+${mealsSummary}
+
+Dados atuais (compras semana):
+${shoppingSummary}`
+
+              setModal({
+                kind: 'ajuda',
+                title: 'Como editar os dados (para LLM / agente)',
+                helpText,
               })
-            }
+            }}
           >
             ?
           </button>
@@ -598,7 +617,18 @@ Salve, rode pnpm build e faça deploy.`
               </ul>
             )}
             {modal.kind === 'ajuda' && (
-              <pre className="help-text">{modal.helpText}</pre>
+              <div className="help-wrap">
+                <div className="modal-actions">
+                  <button
+                    type="button"
+                    className="ghost"
+                    onClick={() => navigator.clipboard?.writeText(modal.helpText || '')}
+                  >
+                    Copiar instrucoes
+                  </button>
+                </div>
+                <pre className="help-text">{modal.helpText}</pre>
+              </div>
             )}
           </div>
         </div>
