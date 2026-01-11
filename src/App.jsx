@@ -410,17 +410,24 @@ function App() {
       <section className="panel full-height">
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin]}
-          initialView="dayGridMonth"
+          initialView="twoWeek"
           events={events}
           timeZone={timeZone}
-          initialDate={anchorDate}
+          initialDate={today}
           height="100%"
           contentHeight="auto"
           expandRows
-          headerToolbar={{ left: 'prev,next', center: 'title', right: 'dayGridMonth,dayGridWeek' }}
+          headerToolbar={{ left: 'prev,next', center: 'title', right: 'dayGridMonth,twoWeek' }}
           dayMaxEvents={false}
           locales={[ptBrLocale]}
           locale="pt-br"
+          views={{
+            twoWeek: {
+              type: 'dayGrid',
+              duration: { weeks: 2 },
+              buttonText: '2 semanas',
+            },
+          }}
           eventOrder={(a, b) => {
             const oa = typeof a.extendedProps.order === 'number' ? a.extendedProps.order : 0
             const ob = typeof b.extendedProps.order === 'number' ? b.extendedProps.order : 0
