@@ -233,7 +233,8 @@ function App() {
 
     return Array.from({ length: normalizedHorizon }, (_, index) => {
       const weekIndex = Math.floor(index / 7)
-      const weekData = getWeekProtein(weekIndex)
+      const rotationIndex = Math.floor((index - PAST_DAYS) / 7)
+      const weekData = getWeekProtein(rotationIndex)
       const templateDay = orderedTemplateDays[index % orderedTemplateDays.length]
       const date = addDays(anchorDate, index)
 
