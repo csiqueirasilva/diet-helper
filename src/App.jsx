@@ -521,7 +521,11 @@ function App() {
                     className="ghost"
                     onClick={() => {
                       const text = modal.content
-                        .map((item) => `${item.name}: ${item.total} ${item.unit} (${(item.sources || []).join(', ')})`)
+                        .map((item) => {
+                          const sources = (item.sources || []).join(', ')
+                          const qty = item.total && item.unit ? ` - ${item.total} ${item.unit}` : ''
+                          return `${item.name}${qty}${sources ? ` (${sources})` : ''}`
+                        })
                         .join('\n')
                       navigator.clipboard?.writeText(text)
                     }}
@@ -534,9 +538,12 @@ function App() {
                     <li key={`${item.name}-${item.unit}`} className="shopping-item">
                       <div>
                         <p className="item-name">{item.name}</p>
-                        <p className="muted">{item.sources?.join(', ')}</p>
+                        <p className="muted">
+                          {[item.sources?.join(', '), item.total && item.unit ? `${item.total} ${item.unit}` : '']
+                            .filter(Boolean)
+                            .join(' • ')}
+                        </p>
                       </div>
-                      <span className="qty">{item.total} {item.unit}</span>
                     </li>
                   ))}
                 </ul>
@@ -559,13 +566,7 @@ function App() {
             {modal.kind === 'meal' && (
               <ul className="prep-tasks modal-list">
                 {(modal.items || []).map((item) => {
-                  const servings = item.servings || 1
-                  const displayServings = servings < 1 ? 1 : Math.round(servings)
-                  return (
-                    <li key={item.mealId}>
-                      {item.mealName} · {displayServings} porcao(oes)
-                    </li>
-                  )
+                  return <li key={item.mealId}>{item.mealName}</li>
                 })}
               </ul>
             )}
