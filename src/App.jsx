@@ -389,7 +389,7 @@ function App() {
     })
 
     weekSegments.forEach((week) => {
-      const shoppingDate = addDays(week.start, 6) // compras no sabado desta semana
+      const shoppingDate = addDays(week.start, -1) // compras no sabado anterior para preparar a semana
       const dateStr = toInputValue(shoppingDate, timeZone)
       all.push({
         id: `${dateStr}-shopping`,
