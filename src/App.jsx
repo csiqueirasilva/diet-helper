@@ -205,6 +205,14 @@ function App() {
   }, [planData])
 
   const templateDays = plan?.template?.days || []
+  const orderedTemplateDays = useMemo(() => {
+    if (!templateDays.length) return []
+    const offset = templateDays.findIndex((day) =>
+      (day.name || '').toLowerCase().startsWith('domingo'),
+    )
+    if (offset === -1) return templateDays
+    return [...templateDays.slice(offset), ...templateDays.slice(0, offset)]
+  }, [templateDays])
   const rotation = plan?.proteinRotation || []
   const fallbackProteinId = plan?.fallbackProteinId
   const fallbackBaseProteins = plan?.fallbackBaseProteins || []
@@ -221,12 +229,12 @@ function App() {
   }
 
   const schedule = useMemo(() => {
-    if (!templateDays.length) return []
+    if (!orderedTemplateDays.length) return []
 
     return Array.from({ length: normalizedHorizon }, (_, index) => {
       const weekIndex = Math.floor(index / 7)
       const weekData = getWeekProtein(weekIndex)
-      const templateDay = templateDays[index % templateDays.length]
+      const templateDay = orderedTemplateDays[index % orderedTemplateDays.length]
       const date = addDays(anchorDate, index)
 
       const slots = (templateDay.slots || []).map((slot) => {
