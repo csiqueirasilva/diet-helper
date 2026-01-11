@@ -120,7 +120,7 @@ function App() {
   const [anchorDateInput, setAnchorDateInput] = useState('')
   const [status, setStatus] = useState({ loading: true, error: '' })
   const [modal, setModal] = useState(null)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 900 : false)
 
   const timeZone = 'local'
   const today = useMemo(() => startOfDayLocal(new Date()), [])
