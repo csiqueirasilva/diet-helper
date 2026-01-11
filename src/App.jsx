@@ -13,6 +13,8 @@ const DATA_FILES = {
 }
 
 const WEEK_PROTEIN_KEY = 'week-protein'
+const BASE_A_KEY = 'base-protein-a'
+const BASE_B_KEY = 'base-protein-b'
 const MS_PER_DAY = 24 * 60 * 60 * 1000
 const PAST_DAYS = 14
 
@@ -79,7 +81,12 @@ const withBasePath = (file) => {
   return `${base}data/${file}`
 }
 
-const resolveMealId = (mealId, proteinId) => (mealId === WEEK_PROTEIN_KEY ? proteinId : mealId)
+const resolveMealId = (mealId, week) => {
+  if (mealId === WEEK_PROTEIN_KEY) return week?.proteinId
+  if (mealId === BASE_A_KEY) return week?.baseProteins?.[0] || week?.fallbackBaseProteins?.[0]
+  if (mealId === BASE_B_KEY) return week?.baseProteins?.[1] || week?.fallbackBaseProteins?.[1]
+  return mealId
+}
 
 const computeShoppingList = (days, mealsById) => {
   const items = new Map()
@@ -200,6 +207,7 @@ function App() {
   const templateDays = plan?.template?.days || []
   const rotation = plan?.proteinRotation || []
   const fallbackProteinId = plan?.fallbackProteinId
+  const fallbackBaseProteins = plan?.fallbackBaseProteins || []
   const horizon = Math.max(config?.horizonDays || 365, 56)
   const horizonWeeks = Math.max(1, Math.ceil(horizon / 7))
   const normalizedHorizon = horizonWeeks * 7
@@ -208,7 +216,8 @@ function App() {
     const rotationEntry = rotation.length ? rotation[weekIndex % rotation.length] : null
     const proteinId = rotationEntry?.proteinId || fallbackProteinId
     const label = rotationEntry?.label || rotationEntry?.id || `Semana ${weekIndex + 1}`
-    return { proteinId, label }
+    const baseProteins = rotationEntry?.baseProteins || fallbackBaseProteins
+    return { proteinId, label, baseProteins, fallbackBaseProteins }
   }
 
   const schedule = useMemo(() => {
@@ -216,7 +225,7 @@ function App() {
 
     return Array.from({ length: normalizedHorizon }, (_, index) => {
       const weekIndex = Math.floor(index / 7)
-      const { proteinId, label } = getWeekProtein(weekIndex)
+      const weekData = getWeekProtein(weekIndex)
       const templateDay = templateDays[index % templateDays.length]
       const date = addDays(anchorDate, index)
 
@@ -227,7 +236,7 @@ function App() {
             ? [{ mealId: slot.mealId, servings: slot.servings || 1 }]
             : []
         ).map((item) => {
-          const resolvedId = resolveMealId(item.mealId, proteinId)
+          const resolvedId = resolveMealId(item.mealId, weekData)
           const meal = mealsById[resolvedId]
           return {
             ...item,
@@ -242,7 +251,9 @@ function App() {
         ...templateDay,
         date,
         weekIndex,
-        weekLabel: label,
+        weekLabel: weekData.label,
+        baseProteins: weekData.baseProteins,
+        proteinId: weekData.proteinId,
         slots,
       }
     })

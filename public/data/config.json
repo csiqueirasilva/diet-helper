@@ -2,6 +2,6 @@
   "startDate": "2026-01-11",
   "horizonDays": 3650,
   "shoppingFrequencyDays": 7,
-  "shoppingAnchorDate": "2026-01-11",
+  "shoppingAnchorDate": "2026-01-10",
   "timezone": "America/Sao_Paulo"
 }
