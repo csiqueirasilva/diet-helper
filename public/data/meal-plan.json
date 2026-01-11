@@ -3,8 +3,7 @@
   "plans": [
     {
       "id": "plano-semanal",
-      "label": "Domingo/Quarta - Ciclo semanal fixo",
-      "totalDays": 60,
+      "label": "Domingo/Quarta - Ciclo semanal fixo (Domingo: carne + arroz + legumes ate 4a almoco; Quarta: frango + macarrao; Sex/Sab livre)",
       "proteinRotation": [
         {"id": "week-1", "label": "Acem em cubos ao molho", "proteinId": "proteina-acem-molho"},
         {"id": "week-2", "label": "File mignon acebolado", "proteinId": "proteina-file-acebolado"},
@@ -18,13 +17,13 @@
             "dayIndex": 0,
             "name": "Domingo",
             "slots": [
-              {"time": "Almoco", "items": [{"mealId": "refeicao-livre", "servings": 1}], "note": "Livre"},
+              {"time": "Almoco", "items": [{"mealId": "refeicao-livre", "servings": 1}]},
               {
                 "time": "Jantar",
                 "items": [
-                  {"mealId": "week-protein", "servings": 1},
-                  {"mealId": "arroz-base", "servings": 1},
-                  {"mealId": "salada-simples", "servings": 1}
+                  {"mealId": "week-protein", "servings": 2},
+                  {"mealId": "arroz-base", "servings": 2},
+                  {"mealId": "salada-simples", "servings": 2}
                 ]
               }
             ]
@@ -44,9 +43,9 @@
               {
                 "time": "Jantar",
                 "items": [
-                  {"mealId": "week-protein", "servings": 1},
-                  {"mealId": "arroz-base", "servings": 1},
-                  {"mealId": "salada-simples", "servings": 1}
+                  {"mealId": "week-protein", "servings": 2},
+                  {"mealId": "arroz-base", "servings": 2},
+                  {"mealId": "salada-simples", "servings": 2}
                 ]
               }
             ]
@@ -66,10 +65,9 @@
               {
                 "time": "Jantar",
                 "items": [
-                  {"mealId": "week-protein", "servings": 1},
-                  {"mealId": "arroz-base", "servings": 1},
-                  {"mealId": "salada-simples", "servings": 1},
-                  {"mealId": "molho-base", "servings": 0.5}
+                  {"mealId": "week-protein", "servings": 2},
+                  {"mealId": "arroz-base", "servings": 2},
+                  {"mealId": "salada-simples", "servings": 2}
                 ]
               }
             ]
@@ -89,9 +87,9 @@
               {
                 "time": "Jantar (comeca parte facil)",
                 "items": [
-                  {"mealId": "macarrao-precozido", "servings": 1},
-                  {"mealId": "frango-base", "servings": 1},
-                  {"mealId": "molho-base", "servings": 1}
+                  {"mealId": "macarrao-precozido", "servings": 2},
+                  {"mealId": "frango-base", "servings": 2},
+                  {"mealId": "molho-base", "servings": 2}
                 ]
               }
             ]
@@ -111,8 +109,8 @@
               {
                 "time": "Jantar",
                 "items": [
-                  {"mealId": "macarrao-alho-oleo", "servings": 1},
-                  {"mealId": "frango-base", "servings": 1}
+                  {"mealId": "macarrao-alho-oleo", "servings": 2},
+                  {"mealId": "frango-base", "servings": 2}
                 ]
               }
             ]
@@ -130,10 +128,9 @@
                 ]
               },
               {
-                "time": "Jantar",
+                "time": "Jantar (livre)",
                 "items": [
-                  {"mealId": "omelete-simples", "servings": 1},
-                  {"mealId": "macarrao-alho-oleo", "servings": 1}
+                  {"mealId": "refeicao-livre", "servings": 1}
                 ]
               }
             ]
@@ -143,19 +140,15 @@
             "name": "Sabado",
             "slots": [
               {
-                "time": "Almoco",
+                "time": "Almoco (livre)",
                 "items": [
-                  {"mealId": "macarrao-precozido", "servings": 1},
-                  {"mealId": "frango-base", "servings": 1},
-                  {"mealId": "ovo-cozido", "servings": 1}
+                  {"mealId": "refeicao-livre", "servings": 1}
                 ]
               },
               {
-                "time": "Jantar",
+                "time": "Jantar (livre)",
                 "items": [
-                  {"mealId": "macarrao-precozido", "servings": 1},
-                  {"mealId": "frango-base", "servings": 1},
-                  {"mealId": "molho-base", "servings": 1}
+                  {"mealId": "refeicao-livre", "servings": 1}
                 ]
               }
             ]
