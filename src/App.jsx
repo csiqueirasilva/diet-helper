@@ -386,16 +386,16 @@ function App() {
         title: block.label,
         start: dateStr,
         allDay: true,
-          className: 'event-prep',
-          extendedProps: {
-            type: 'prep',
-            tasks: PREP_TASKS[block.kind] || [],
-            covers: block.covers,
-            label: block.label,
-            order: 0.25,
-          },
-        })
+        className: 'event-prep',
+        extendedProps: {
+          type: 'prep',
+          tasks: PREP_TASKS[block.kind] || [],
+          covers: block.covers,
+          label: block.label,
+          order: 1.25, // depois do almoco, antes do jantar
+        },
       })
+    })
 
       return all
   }, [schedule, timeZone, weekSegments, prepBlocks])
