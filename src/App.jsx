@@ -499,17 +499,9 @@ function App() {
             type="button"
             className="ghost help-btn"
             onClick={() => {
-              const mealsSummary = meals
-                .map((m) => `- ${m.id}: ${m.name}`)
-                .join('\n')
-
-              const shoppingSummary = shoppingList
-                .map((item) => {
-                  const sources = item.sources?.join(', ') || ''
-                  const qty = item.total && item.unit ? ` - ${item.total} ${item.unit}` : ''
-                  return `- ${item.name}${qty}${sources ? ` (${sources})` : ''}`
-                })
-                .join('\n')
+              const configText = JSON.stringify(config || {}, null, 2)
+              const planText = JSON.stringify(planData || {}, null, 2)
+              const mealsText = JSON.stringify(meals || [], null, 2)
 
               const helpText = `Formato dos JSONs (public/data):
 - config.json: { startDate, horizonDays, shoppingFrequencyDays, shoppingAnchorDate, timezone }
@@ -526,11 +518,15 @@ Como editar:
 - Ajuste slots e week-protein em meal-plan.json; cada slot pode ter items[{mealId,servings}].
 - Troque horizonDays em config.json para mais/menos meses.
 
-Dados atuais (refeicoes):
-${mealsSummary}
+Dados atuais (copie/edite e cole de volta nos JSONs):
+config.json:
+${configText}
 
-Dados atuais (compras semana):
-${shoppingSummary}`
+meal-plan.json:
+${planText}
+
+meals.json:
+${mealsText}`
 
               setModal({
                 kind: 'ajuda',
